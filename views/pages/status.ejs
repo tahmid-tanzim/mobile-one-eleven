@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+    <!-- Example row of columns -->
+
+        <hr>
+        <div class="d-flex justify-content-center">
+            <div class="alert alert-<%= alert_mapper[status] || 'info' %>" role="alert" style="margin-top: 40px;">
+                <h4 style="margin-top: 10px;">SAMPLE STATUS URL</h4>
+                <hr>
+                <dl class="row" style="margin-bottom: 0">
+                    <dt class="col-sm-3">STATUS</dt>
+                    <dd class="col-sm-9">
+                        <%= status.replace(/\b\w/g, l => l.toUpperCase()) %>
+                    </dd>
+                </dl>
+                <br>
+                <a href="/app/status/success" class="btn btn-success btn-sm" role="button" aria-pressed="true">Success</a>
+                <a href="/app/status/failed" class="btn btn-danger btn-sm" role="button" aria-pressed="true">Failed</a>
+                <a href="/app/status/cancelled" class="btn btn-warning btn-sm" role="button" aria-pressed="true">Cancelled</a>
+                <a href="/app/status/info" class="btn btn-info btn-sm" role="button" aria-pressed="true">Info</a>
+                <a href="/app/status/primary" class="btn btn-primary btn-sm" role="button" aria-pressed="true">Primary</a>
+                <a href="/app/status/secondary" class="btn btn-secondary btn-sm" role="button" aria-pressed="true">Secondary</a>
+            </div>
+        </div>
+    <% include ../partials/footer %>

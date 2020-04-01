@@ -1,0 +1,30 @@
+{
+  "name": "mobile-one-eleven",
+  "version": "1.0.0",
+  "description": "This project is a sample ecommerce project name Mobile OneEleven for the demonstration of payment",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "server": "pm2 start server.js",
+    "stop": "pm2 stop all"
+  },
+  "keywords": [
+    "Mobile OneEleven",
+    "Checkout",
+    "ecommerce"
+  ],
+  "author": "Tahmid Tanzim <tahmid.tanzim@gmail.com>",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.1",
+    "pm2": "^2.10.1"
+  }
+}

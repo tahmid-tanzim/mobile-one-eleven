@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+    <% products.forEach(function(product) { %>
+        <hr>
+        <div class="row product">
+            <div class="col-md-3 col-md-offset-1">
+                <img src="/images/<%= product.image %>" onError="this.onerror=null;this.src='/images/default.jpg';" class="img-responsive" alt="Product Image">
+            </div>
+            <div class="col-md-7">
+                <h2 class="product-name">
+                    <%= product.name %>
+                </h2>
+                <p>
+                    <ul>
+                        <% product.details.forEach(function(item) { %>
+                            <li>
+                                <%= item %>
+                            </li>
+                            <% }); %>
+                    </ul>
+                </p>
+                <h4 class="text-muted product-price">BDT
+                    <%= product.price %>
+                </h4>
+                <form action="/process-payment" method="post">
+                    <input type="hidden" value="<%= product.id %>" name="product_id" />
+                    <input type="submit" class="btn btn-primary" role="button" value="Pay with iPay">
+                </form>
+            </div>
+        </div>
+        <% }); %>
+            <% include ../partials/footer %>
