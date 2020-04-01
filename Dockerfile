@@ -1,6 +1,6 @@
-FROM node:8.10.0
+FROM node:12.4.0
 
-ENV APP_DIR /pay-with-ipay
+ENV APP_DIR /mobile-one-eleven
 
 RUN mkdir -p ${APP_DIR}
 WORKDIR APP_DIR
